@@ -36,7 +36,9 @@ const tema = {
     espacamentos:{
         l: '32px',
         s: '16px',
-    }
+    },
+
+    fontFamliy: "'Montserrat', sans-serif"
 }
 
 export const ProvedorTema = ({ children }) => {

@@ -9,7 +9,7 @@ const tema = {
 
         primarias: {
             a: '#5754ed' ,
-            b: '',
+            b: '#d93114',
             c: ''
         },
 

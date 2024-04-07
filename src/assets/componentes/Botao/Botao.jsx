@@ -42,7 +42,7 @@ const BotaoSecundarioEstilizado = styled.button`
     }
 `
 
-export const Botoes = ({ children, variante = 'primaria' }) => {
+export const Botao = ({ children, variante = 'primaria' }) => {
     if (variante === 'primaria') {
         return <BotaoPrimarioEstilizado>
             {children}
@@ -54,5 +54,7 @@ export const Botoes = ({ children, variante = 'primaria' }) => {
 }
 
 Botao.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    variante: PropTypes.string
 }
+

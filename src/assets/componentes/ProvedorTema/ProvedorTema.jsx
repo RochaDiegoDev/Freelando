@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 
 const tema = {
     cores:{
-        branco: '',
+        branco: '#fff',
         atencao: '',
-        focus: '',
+        focus: '#B009FF',
 
         primarias: {
-            a: '#5754ed' ,
-            b: '#d93114',
-            c: ''
+            a: '#5754ED' ,
+            b: '#D93114',
+            c: '#fff'
         },
 
         secundarias: {
-            a: '#ebeaf9' ,
+            a: '#F8F8FD' ,
             b: '',
             c: ''
         }, 
@@ -28,7 +28,7 @@ const tema = {
 
         dark: {
             a: '',
-            b: '',
+            b: '#B61B00',
         }
 
     },
@@ -39,7 +39,7 @@ const tema = {
         s: '16px',
     },
 
-    fontFamliy: "'Montserrat', sans-serif"
+    fontFamily: "'Montserrat', sans-serif"
 }
 
 export const ProvedorTema = ({ children }) => {

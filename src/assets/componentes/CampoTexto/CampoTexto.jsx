@@ -1,15 +1,7 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
+import {LabelEstilizada} from '../Labels/index'
 
-const LabelEstilizada = styled.label`
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align:left;
-    `
 const InputEstilizada = styled.input`
     display: block;
     width: 100%;
@@ -36,5 +28,5 @@ export const CampoTexto = ({ titulo }) => {
 }
 
 CampoTexto.propTypes = {
-    children: PropTypes.node
+    titulo: PropTypes.node
 }

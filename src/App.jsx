@@ -7,8 +7,38 @@ import { ProvedorTema } from './assets/componentes/ProvedorTema/ProvedorTema'
 import { Tipografia } from './assets/componentes/Tipografia'
 import { Row } from 'react-grid-system'
 import { Col } from 'react-grid-system'
-import { Botao } from './assets/componentes/Botao/Botao'
+import { BotaoEstilizado } from './assets/componentes/Botao/Botao'
+import { ListaSuspensa } from './assets/componentes/ListaSuspensa/ListaSuspensa'
 
+  const estadosBrasileiros = [
+    { "text": "Acre", "value": "AC" },
+    { "text": "Alagoas", "value": "AL" },
+    { "text": "Amapá", "value": "AP" },
+    { "text": "Amazonas", "value": "AM" },
+    { "text": "Bahia", "value": "BA" },
+    { "text": "Ceará", "value": "CE" },
+    { "text": "Distrito Federal", "value": "DF" },
+    { "text": "Espírito Santo", "value": "ES" },
+    { "text": "Goiás", "value": "GO" },
+    { "text": "Maranhão", "value": "MA" },
+    { "text": "Mato Grosso", "value": "MT" },
+    { "text": "Mato Grosso do Sul", "value": "MS" },
+    { "text": "Minas Gerais", "value": "MG" },
+    { "text": "Pará", "value": "PA" },
+    { "text": "Paraíba", "value": "PB" },
+    { "text": "Paraná", "value": "PR" },
+    { "text": "Pernambuco", "value": "PE" },
+    { "text": "Piauí", "value": "PI" },
+    { "text": "Rio de Janeiro", "value": "RJ" },
+    { "text": "Rio Grande do Norte", "value": "RN" },
+    { "text": "Rio Grande do Sul", "value": "RS" },
+    { "text": "Rondônia", "value": "RO" },
+    { "text": "Roraima", "value": "RR" },
+    { "text": "Santa Catarina", "value": "SC" },
+    { "text": "São Paulo", "value": "SP" },
+    { "text": "Sergipe", "value": "SE" },
+    { "text": "Tocantins", "value": "TO" }
+  ]
 
 function App() {
   return (
@@ -31,7 +61,7 @@ function App() {
 
               <Row>
                 <Col lg={4} md={4} sm={4}>
-                  <CampoTexto titulo="Estado" />
+                  <ListaSuspensa titulo="Estado" opcoes={estadosBrasileiros}/>
                 </Col>
 
                 <Col lg={8} md={8} sm={8}>
@@ -57,12 +87,12 @@ function App() {
               <Row>
                 <Col lg={6} md={6} sm={6}>
                   <div style={{textAlign: 'left'}}>
-                    <Botao variante="secundaria">Anterior</Botao>
+                    <BotaoEstilizado variante="secundaria">Anterior</BotaoEstilizado>
                   </div>
                 </Col>
                 <Col lg={6} md={6} sm={6}>
                   <div style={{ textAlign: 'right' }}>
-                    <Botao>Proximo</Botao>
+                    <BotaoEstilizado>Proximo</BotaoEstilizado>
                   </div>
                 </Col>
               </Row>

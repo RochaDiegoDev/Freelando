@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 import PropTypes from 'prop-types';
 
-const BotaoPrimarioEstilizado = styled.button`
+
+export const BotaoPrimarioEstilizado = styled.button`
     background: ${props => props.theme.cores.primarias.b};
     color: ${props => props.theme.cores.branco};
     border-radius: ${props => props.theme.espacamentos.s};
@@ -42,9 +43,9 @@ const BotaoSecundarioEstilizado = styled.button`
     }
 `
 
-export const Botao = ({ children, variante = 'primaria' }) => {
+export const BotaoEstilizado = ({ children, variante= 'primaria', onClick }) => {
     if (variante === 'primaria') {
-        return <BotaoPrimarioEstilizado>
+        return <BotaoPrimarioEstilizado onClick={onClick}>
             {children}
         </BotaoPrimarioEstilizado>
     }
@@ -53,8 +54,9 @@ export const Botao = ({ children, variante = 'primaria' }) => {
     </BotaoSecundarioEstilizado>
 }
 
-Botao.propTypes = {
+BotaoEstilizado.propTypes = {
     children: PropTypes.node,
-    variante: PropTypes.string
+    variante: PropTypes.string,
+    onClick: PropTypes.func
 }
 
